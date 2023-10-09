@@ -1,0 +1,79 @@
+.footer {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    position : fixed;
+    bottom: 0;
+    left: 0;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.todoContainer{
+    width: 400px;
+    height: 560px;
+    border : 5px solid gray;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.todoHeader {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #4b4873;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.todoInputBox{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    /*background-color: ;*/
+}
+.todoInput{
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.todoItemBox{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    overflow-y: auto;
+    background-color: #f2f2f2;
+}
+
+.todoCheckBox{
+    width: 20%;
+    float: left;
+}
+.todoTitleBox{
+    width: 60%;
+    float: left;
+    font-weight: 500;
+}
+.todoRemoveBox{
+    width: 20%;
+    float: right;
+}
+.todoCheckBtn{
+    text-align: left;
+}
+
+.number {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.counterBtn {
+    margin: 5px;
+}
