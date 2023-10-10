@@ -27,7 +27,7 @@ const Header = () => {
                     <Nav className="me-auto">
                         <Nav.Link onClick={goCounter}>Counter</Nav.Link>
                         <Nav.Link onClick={goTodoList}>TodoList</Nav.Link>
-                        <Nav.Link onClick={goPost}>Post crud</Nav.Link>
+                        <Nav.Link onClick={goPost}>Post</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
