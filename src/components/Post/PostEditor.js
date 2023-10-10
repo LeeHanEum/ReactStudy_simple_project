@@ -18,7 +18,7 @@ const PostEditor = ({onCreate}) => {
         });
     }
 
-    const onsubmit = (e) => {
+    const onsubmit = () => {
         onCreate(state.title, state.writer, state.content);
         alert("저장 성공")
         setState({
