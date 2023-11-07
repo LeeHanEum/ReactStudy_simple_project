@@ -1,13 +1,11 @@
 import React, {useRef, useState} from 'react';
 import PostEditor from "./PostEditor";
 import PostList from "./PostList";
-import "../../styles/postStyle.css"
 
 const Post = () => {
 
     const [postList, setPostList] = useState([]);
-
-    const postId = useRef(1);
+    const postId = useRef(1)
 
     const onCreate = (title, writer, content) => {
         const create_date = new Date().getTime();
@@ -22,7 +20,7 @@ const Post = () => {
         setPostList([newPost, ...postList]);
     }
 
-    const onRemove = (targetId) => {
+    const onRemove = (targetId) =>{
         const newPostList = postList.filter((it) => it.id !== targetId);
         setPostList(newPostList);
     }
@@ -30,15 +28,20 @@ const Post = () => {
     const onEdit = (targetId, newContent) => {
         setPostList(
             postList.map((it) =>
-                it.id === targetId ? {...it, content : newContent} : it
-            )
+                it.id === targetId ? {...it, content : newContent} : it)
         );
     }
+
 
     return (
         <div className="post_container">
             <PostEditor onCreate={onCreate}/>
-            <PostList postList={postList} onRemove={onRemove} onEdit={onEdit}/>
+            <PostList
+                postList={postList}
+                onRemove={onRemove}
+                onEdit={onEdit}
+            />
+
         </div>
     );
 };

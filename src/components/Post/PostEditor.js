@@ -1,15 +1,24 @@
 import React, {useState} from 'react';
-import Form from "react-bootstrap/Form";
-import "../../styles/postStyle.css"
-import {Button} from "react-bootstrap";
+import {Button, Form} from "react-bootstrap";
+import '../../styles/postStyle.css'
 
 const PostEditor = ({onCreate}) => {
 
     const [state, setState] = useState({
         title : "",
         writer : "",
-        content : "",
+        content : ""
     });
+
+    const onSubmit = () => {
+        onCreate(state.title, state.writer, state.content);
+        alert("저장 성공")
+        setState({
+            title: "",
+            writer: "",
+            content: "",
+        })
+    }
 
     const handleChangeState = (e) => {
         setState({
@@ -18,45 +27,35 @@ const PostEditor = ({onCreate}) => {
         });
     }
 
-    const onsubmit = () => {
-        onCreate(state.title, state.writer, state.content);
-        alert("저장 성공")
-        setState({
-            title : "",
-            writer : "",
-            content : "",
-        });
-    }
-
     return (
         <div className="editor_box">
             <h4 style={{fontWeight : "bold"}}>게시글 작성</h4>
             <Form>
                 <Form.Control
-                    type="text"
-                    placeholder="제목을 입력하세요."
                     className="title_input"
-                    name="title"
-                    onChange={handleChangeState}
-                    value={state.title}
-                />
-                <Form.Control
                     type="text"
-                    placeholder="작성자"
-                    className="writer_input"
-                    name="writer"
+                    name="title"
+                    value={state.title}
+                    placeholder="제목을 입력하세요."
                     onChange={handleChangeState}
-                    value={state.writer}
                 />
                 <Form.Control
+                    className="writer_input"
+                    type="text"
+                    name="writer"
+                    value={state.writer}
+                    placeholder="작성자"
+                    onChange={handleChangeState}
+                />
+                <Form.Control
+                    className="text_input"
                     as="textarea"
                     rows={5}
-                    className="text_input"
                     name="content"
-                    onChange={handleChangeState}
                     value={state.content}
+                    onChange={handleChangeState}
                 />
-                <Button variant="primary" className="submit_btn" onClick={onsubmit}>저장</Button>
+                <Button variant="primary" className="submit_btn" onClick={onSubmit}>저장</Button>
             </Form>
         </div>
     );
