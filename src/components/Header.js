@@ -6,28 +6,23 @@ const Header = () => {
 
     const navigate = useNavigate();
 
-    const goMain = () => {
-        navigate("/");
-    }
-    const goCounter = () => {
-        navigate("/counter");
-    }
-    const goTodoList = () => {
-        navigate("/todolist");
-    }
-    const goPost = () => {
-        navigate("/post");
+    const pathArr = ["", "counter", "todolist", "post", "userInfo"];
+
+    const goTo = (path) => {
+        navigate(path);
     }
 
     return (
         <div>
             <Navbar bg="light" data-bs-theme="light">
                 <Container>
-                    <Navbar.Brand onClick={goMain}>C-Lab React 스터디</Navbar.Brand>
+                    <Navbar.Brand onClick={() => goTo('/')}>C-Lab React 스터디</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link onClick={goCounter}>Counter</Nav.Link>
-                        <Nav.Link onClick={goTodoList}>TodoList</Nav.Link>
-                        <Nav.Link onClick={goPost}>Post</Nav.Link>
+                        {pathArr.map((path) => (
+                            <Nav.Link key={path} onClick={() => goTo('/' + path)}>
+                                {path}
+                            </Nav.Link>
+                        ))}
                     </Nav>
                 </Container>
             </Navbar>

@@ -7,6 +7,7 @@ import {Route, Routes} from "react-router-dom";
 import TodoList from "./components/TodoList/TodoList";
 import Counter from "./components/Counter";
 import Post from "./components/Post/Post";
+import UserInfo from "./components/UserInfo/UserInfo";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/counter" element={<Counter />}/>
                 <Route path="/todolist" element={<TodoList />}/>
                 <Route path="/post" element={<Post />}/>
+                <Route path="/userInfo" element={<UserInfo />}/>
             </Routes>
         <Footer />
     </div>
