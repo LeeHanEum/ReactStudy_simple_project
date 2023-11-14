@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import PrimeNum from "./PrimeNum";
 import {Button} from "react-bootstrap";
 import "../styles/style.css"
