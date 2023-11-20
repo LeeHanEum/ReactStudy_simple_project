@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PrimeNum from "./PrimeNum";
 import {Button} from "react-bootstrap";
 import "../styles/style.css"
@@ -14,6 +14,10 @@ const Counter = () => {
     const onDecrease = () =>{
         setNumber(number-1);
     }
+
+    useEffect(() => {
+        document.title = `number 값이 ${number}로 변화함`;
+    }, [number]);
 
     return (
         <div className="container">

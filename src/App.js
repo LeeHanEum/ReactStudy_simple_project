@@ -11,19 +11,19 @@ import UserInfo from "./components/UserInfo/UserInfo";
 
 
 function App() {
-  return (
-    <div className="App">
-        <Header/>
+    return (
+        <div className="App">
+            <Header/>
             <Routes>
                 <Route path="/" element={<Main/>}/>
-                <Route path="/counter" element={<Counter />}/>
-                <Route path="/todolist" element={<TodoList />}/>
-                <Route path="/post" element={<Post />}/>
-                <Route path="/userInfo" element={<UserInfo />}/>
+                <Route path="/counter" element={<Counter/>}/>
+                <Route path="/todolist" element={<TodoList/>}/>
+                <Route path="/post" element={<Post/>}/>
+                <Route path="/userInfo" element={<UserInfo/>}/>
             </Routes>
-        <Footer />
-    </div>
-  );
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;

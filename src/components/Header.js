@@ -6,10 +6,10 @@ const Header = () => {
 
     const navigate = useNavigate();
 
-    const pathArr = ["", "counter", "todolist", "post", "userInfo"];
+    const pathArr = ["", "counter", "todolist", "post", "userInfo"]
 
-    const goTo = (path) => {
-        navigate(path);
+    const goTo  = (path) => {
+        navigate(path)
     }
 
     return (
@@ -19,7 +19,7 @@ const Header = () => {
                     <Navbar.Brand onClick={() => goTo('/')}>C-Lab React 스터디</Navbar.Brand>
                     <Nav className="me-auto">
                         {pathArr.map((path) => (
-                            <Nav.Link key={path} onClick={() => goTo('/' + path)}>
+                            <Nav.Link key={path} onClick={() => goTo ('/' + path)}>
                                 {path}
                             </Nav.Link>
                         ))}
