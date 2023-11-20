@@ -8,7 +8,8 @@ const initialAuthState = {
     logout: () => {},
 };
 
-const AuthProvider = ({ children }) => {
+const AuthProvider = ({children}) => {
+
     const [authState, setAuthState] = useState(initialAuthState);
 
     const login = () => {
