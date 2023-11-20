@@ -8,20 +8,23 @@ import TodoList from "./components/TodoList/TodoList";
 import Counter from "./components/Counter";
 import Post from "./components/Post/Post";
 import UserInfo from "./components/UserInfo/UserInfo";
+import AuthProvider from "./components/Auth/AuthProvider";
 
 
 function App() {
     return (
         <div className="App">
-            <Header/>
-            <Routes>
-                <Route path="/" element={<Main/>}/>
-                <Route path="/counter" element={<Counter/>}/>
-                <Route path="/todolist" element={<TodoList/>}/>
-                <Route path="/post" element={<Post/>}/>
-                <Route path="/userInfo" element={<UserInfo/>}/>
-            </Routes>
-            <Footer/>
+            <AuthProvider>
+                <Header/>
+                <Routes>
+                    <Route path="/" element={<Main/>}/>
+                    <Route path="/counter" element={<Counter/>}/>
+                    <Route path="/todolist" element={<TodoList/>}/>
+                    <Route path="/post" element={<Post/>}/>
+                    <Route path="/userInfo" element={<UserInfo/>}/>
+                </Routes>
+                <Footer/>
+            </AuthProvider>
         </div>
     );
 }
