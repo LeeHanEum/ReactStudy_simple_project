@@ -9,6 +9,7 @@ import Counter from "./components/Counter";
 import Post from "./components/Post/Post";
 import UserInfo from "./components/UserInfo/UserInfo";
 import AuthProvider from "./components/Auth/AuthProvider";
+import CounterContainer from "./components/ReduxCounter/CounterContainer";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/todolist" element={<TodoList/>}/>
                     <Route path="/post" element={<Post/>}/>
                     <Route path="/userInfo" element={<UserInfo/>}/>
+                    <Route path="/redux-counter" element={<CounterContainer/>}/>
                 </Routes>
                 <Footer/>
             </AuthProvider>

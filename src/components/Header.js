@@ -10,7 +10,7 @@ const Header = () => {
 
     const authContext = useContext(AuthContext);
 
-    const pathArr = ["", "counter", "todolist", "post", "userInfo"]
+    const pathArr = ["", "counter", "todolist", "post", "userInfo","redux-counter"]
 
     const goTo  = (path) => {
         navigate(path)
